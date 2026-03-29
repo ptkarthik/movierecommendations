@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+requests
+python-dotenv
+google-genai
+
+pydantic
+pydantic-settings
+urllib3

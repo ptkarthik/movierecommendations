@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Mystery 101: Deadly History",
+    "year": "2021",
+    "url": "http://www.omdbapi.com/?apikey=acdaf73&t=Mystery%20101%3A%20Deadly%20History&y=2021&type=movie",
+    "returncode": 0,
+    "response": {
+      "Title": "Mystery 101: Deadly History",
+      "Year": "2021",
+      "Rated": "TV-PG",
+      "Released": "01 Aug 2021",
+      "Runtime": "84 min",
+      "Genre": "N/A",
+      "Director": "Stacey N. Harding",
+      "Writer": "John Christian Plummer, Robin Bernheim, Lee Goldberg",
+      "Actors": "Jill Wagner, Kristoffer Polaha, Robin Thomas",
+      "Plot": "Amy and Travis travel to New York to investigate after Amy's uncle goes missing, and the initial clues make them fear the worst.",
+      "Language": "English",
+      "Country": "Canada, United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjJhNjRmZmQtMjBmYy00N2ZlLTliNGEtY2M5ODU4ZWZhM2I0XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.4/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.4",
+      "imdbVotes": "838",
+      "imdbID": "tt14951396",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    "error": null
+  },
+  {
+    "title": "Stolen by My Mother: The Kamiyah Mobley Story",
+    "year": "2020",
+    "url": "http://www.omdbapi.com/?apikey=acdaf73&t=Stolen%20by%20My%20Mother%3A%20The%20Kamiyah%20Mobley%20Story&y=2020&type=movie",
+    "returncode": 0,
+    "response": {
+      "Title": "Stolen by My Mother: The Kamiyah Mobley Story",
+      "Year": "2020",
+      "Rated": "TV-14",
+      "Released": "18 Jan 2020",
+      "Runtime": "87 min",
+      "Genre": "Crime, Drama, Mystery",
+      "Director": "Jeffrey W. Byrd",
+      "Writer": "Richard Kletter, Michele Samit",
+      "Actors": "Niecy Nash, Marci T. House, Alvin Sanders",
+      "Plot": "This is a story of a young woman who discovers at age 18, she was abducted as a baby and the family she knew to be hers, wasn't hers at all.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "1 win & 3 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTJjMTQ3NjMtNWNiNC00M2U4LTk0OWItNWNlYWMyMTdhMGI3XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.5/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.5",
+      "imdbVotes": "472",
+      "imdbID": "tt10540628",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    "error": null
+  },
+  {
+    "title": "Stolen Baby: The Murder of Heidi Broussard",
+    "year": "2023",
+    "url": "http://www.omdbapi.com/?apikey=acdaf73&t=Stolen%20Baby%3A%20The%20Murder%20of%20Heidi%20Broussard&y=2023&type=movie",
+    "returncode": 0,
+    "response": {
+      "Title": "Stolen Baby: The Murder of Heidi Broussard",
+      "Year": "2023",
+      "Rated": "TV-14",
+      "Released": "23 Sep 2023",
+      "Runtime": "86 min",
+      "Genre": "Biography, Thriller",
+      "Director": "Michelle Ouellet",
+      "Writer": "Alexandra Salerno",
+      "Actors": "Emily Osment, Anna Hopkins, Ian Lake",
+      "Plot": "Based on the true story of Heidi, who was murdered by her friend Magen.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNGE0MmNhYTAtMTRiYy00Y2Y3LThhNDctOGJlMjU0MmVmMDY4XkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.2/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.2",
+      "imdbVotes": "446",
+      "imdbID": "tt29280965",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    },
+    "error": null
+  }
+]

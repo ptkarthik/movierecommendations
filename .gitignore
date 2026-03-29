@@ -1,0 +1,22 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.db
+backend/*.db.bak.*
+backend/*.log
+backend/.env
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/*.log
+frontend/.env.local
+
+# General
+.DS_Store
+*.tmp
+*.bak
+.git/index.lock
