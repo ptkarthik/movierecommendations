@@ -681,7 +681,23 @@ def get_tv_series(
     if year: query = query.filter(TVSeries.year == year)
     if year_start: query = query.filter(TVSeries.year >= year_start)
     if year_end: query = query.filter(TVSeries.year <= year_end)
-    if genre: query = query.filter(TVSeries.genre.contains(genre))
+    
+    # Exclude non-scripted content by default unless explicitly requested
+    if genre:
+        query = query.filter(TVSeries.genre.contains(genre))
+    else:
+        # Default: Strictly follow the "TV Series & Miniseries" scripted-only rule
+        # Use TMDB 'type' as primary filter, with genre-based fallbacks for unenriched items
+        query = query.filter(or_(
+            TVSeries.type.in_(['Scripted', 'Miniseries']),
+            and_(
+                TVSeries.type == None,
+                ~TVSeries.genre.contains('Reality'),
+                ~TVSeries.genre.contains('News'),
+                ~TVSeries.genre.contains('Talk'),
+                ~TVSeries.genre.contains('Documentary')
+            )
+        ))
     if region:
         region_name = COUNTRY_MAP.get(region, region)
         query = query.filter(or_(TVSeries.country == region, TVSeries.country == region_name))

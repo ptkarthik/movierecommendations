@@ -75,7 +75,7 @@ class TVSeries(Base):
     language = Column(String, index=True)
     genre = Column(String, index=True)
     creator = Column(String)
-    status = Column(String) 
+    type = Column(String) 
     seasons = Column(Integer)
     episodes = Column(Integer)
     poster_path = Column(String)

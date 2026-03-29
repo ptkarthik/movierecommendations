@@ -340,7 +340,9 @@ class DataAggregationService:
         tv.poster_path = details.get('poster_path')
         tv.backdrop_path = details.get('backdrop_path')
         tv.genre = ", ".join([g['name'] for g in details.get('genres', [])])
+        tv.type = details.get('type')
         tv.seasons = details.get('number_of_seasons')
+        tv.episodes = details.get('number_of_episodes')
         
         # Quick score update if missing
         from models import TVRating
@@ -350,8 +352,10 @@ class DataAggregationService:
             self.db.add(rating)
         
         rating.tmdb_rating = details.get('vote_average', 0.0)
-        # For TV, we often use tmdb_rating as a proxy for imdb_rating if IMDb is missing
-        tv.imdb_rating = rating.imdb_rating or rating.tmdb_rating or 0.0 
+        # Baseline: Use tmdb_rating as a fallback for imdb_rating to ensure sorting works immediately
+        rating.imdb_rating = rating.imdb_rating or rating.tmdb_rating or 0.0
+        tv.imdb_rating = rating.imdb_rating
+        
         rating.quickflix_score = self.scoring.calculate_quickflix_score(
             imdb_rating=tv.imdb_rating, 
             tmdb_popularity=details.get('popularity', 0.0)
@@ -444,6 +448,10 @@ class DataAggregationService:
                 rating = Rating(movie_id=movie.id)
                 self.db.add(rating)
             rating.tmdb_rating = tmdb_avg
+            # Baseline: Use TMDB avg as fallback for imdb_rating to allow high-performance sorting
+            rating.imdb_rating = rating.imdb_rating or tmdb_avg
+            movie.imdb_rating  = rating.imdb_rating
+            
             rating.quickflix_score = score
             rating.vote_count      = mv.get('vote_count')
             movie.quickflix_score  = score
