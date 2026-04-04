@@ -295,6 +295,19 @@ def rate_tv(tv_id: int, user_data: UserRating, db: Session = Depends(get_db)):
 def read_root():
     return {"status": "Global Film Intelligence API is active"}
 
+@app.get("/genres/movie")
+def get_movie_genres():
+    """Fetch all movie genres from TMDB."""
+    svc = TMDBService()
+    return svc.get_movie_genres()
+
+@app.get("/genres/tv")
+def get_tv_genres():
+    """Fetch all TV genres from TMDB."""
+    svc = TMDBService()
+    return svc.get_tv_genres()
+
+
 @app.post("/recommendations/generate")
 def generate_recommendation(title: str, year: str = None, db: Session = Depends(get_db)):
     """
@@ -502,6 +515,7 @@ def get_movies(
                 "genre": m.genre,
                 "director": m.director,
                 "country": m.country,
+                "runtime": m.runtime,
                 "poster_path": m.poster_path,
                 "backdrop_path": m.backdrop_path,
                 "rating": rating.imdb_rating if rating else 0.0,

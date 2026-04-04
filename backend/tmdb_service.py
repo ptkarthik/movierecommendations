@@ -109,6 +109,15 @@ class TMDBService:
 
         return self._make_request(url, params)
 
+    def get_movie_genres(self):
+        url = f"{self.BASE_URL}/genre/movie/list"
+        return self._make_request(url, {})
+
+    def get_tv_genres(self):
+        url = f"{self.BASE_URL}/genre/tv/list"
+        return self._make_request(url, {})
+
+
     def search_tv(self, query: str):
         url = f"{self.BASE_URL}/search/tv"
         return self._make_request(url, {"query": query})

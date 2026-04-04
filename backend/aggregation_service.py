@@ -372,7 +372,12 @@ class DataAggregationService:
         14: "Fantasy", 36: "History", 27: "Horror", 10402: "Music",
         9648: "Mystery", 10749: "Romance", 878: "Science Fiction",
         10770: "TV Movie", 53: "Thriller", 10752: "War", 37: "Western",
+        # TV specific
+        10759: "Action & Adventure", 10762: "Kids", 10763: "News",
+        10764: "Reality", 10765: "Sci-Fi & Fantasy", 10766: "Soap",
+        10767: "Talk", 10768: "War & Politics"
     }
+
 
     def _calculate_visible_score(self, imdb: float = None, rt_critics: float = None,
                                   rt_audience: float = None, tmdb_avg: float = None) -> float:
